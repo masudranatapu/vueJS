@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <!-- <h3>Hi live server ji vai</h3> -->
+    <div id="app">
+        <h2>{{ name }}</h2>
+        <h2>{{ age }}</h2>
+    </div>
+
+    <div id="app-2">
+        <h2 v-bind:title="message">
+            ki via 
+        </h2>
+    </div>
+
+    <div id="app-3">
+        <h3 v-if="seen" v-bind:title="title">
+            new orn
+        </h3>
+    </div>
+
+    <div id="app-4">
+        <h3 v-if="hide" v-bind:title="title">
+            googed hinde
+        </h3>
+    </div>
+
+    <div id="app5">
+        <ul v-for="user of users">
+            <li v-bind:title="user.user_name">{{ user.user_name }}</li>
+        </ul>
+    </div>
+    
+    <div id="app6">
+        <h4>{{ msg }}</h4>
+        <button v-on:click="reverseMessage">Elomelo This Msg</button>
+    </div>
+
+    <div id="app7">
+        <p>{{ msg2 }}</p>
+        <input type="text" v-model="msg2">
+    </div>
+
+    <div id="app8">
+        <h3>{{ myname() }}</h3>
+        <h3>{{ myage() }}</h3>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
