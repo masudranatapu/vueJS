@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 4</title>
+</head>
+<body>
+    <div id="app">
+        <h3>My monthly sallary is {{ sallary }} $</h3>
+        <button v-on:click="sallary++"> + </button>
+        <button v-on:click="sallary--"> -1 </button>
+    </div>
+
+    <div id="app2">
+        <h3>This year GDP is {{ gdp }} $</h3>
+        <button v-on:click="gdpgrowthplus()">+</button>
+        <button v-on:click="gdpgrowthminus()">-</button>
+    </div>
+
+    <div id="app3">
+        <h3>This best way to earn doller {{ earn_doller }}</h3>
+        <button type="button" @click="total_earn_doller(100)">-</button>
+        <button type="button" @click="total_earn_doller(-100)">-</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

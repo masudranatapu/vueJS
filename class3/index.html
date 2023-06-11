@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Js - Data Binding </title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <style>
-        btn {
+        .btn {
             padding: 10px;  
+        }
+        ul {
+            padding: 0;
+            list-style: none;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <a v-bind:href=""></a>
+        <a v-bind:href="f_link">{{ f_link }}</a>
+        <ul v-for="image of images" class="">
+            <li>
+                <img v-bind:src="image.image_src" v-bind:alt="image.image_src" v-bind:width="img_width">
+            </li>
+        </ul>
+        <h3>{{input_value}}</h3>
+        <input type="text" v-model:value="input_value">
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
