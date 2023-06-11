@@ -1,17 +1,17 @@
 let app = new Vue({
-    el : "#app",
-    data : {
-        sallary : 20,
+    el: "#app",
+    data: {
+        sallary: 20,
     },
 });
 
 
 let app2 = new Vue({
-    el : "#app2",
+    el: "#app2",
     data: {
-        gdp : 2000,
+        gdp: 2000,
     },
-    methods : {
+    methods: {
         gdpgrowthplus() {
             this.gdp += 50;
         },
@@ -23,12 +23,24 @@ let app2 = new Vue({
 
 let app3 = new Vue({
     el: "#app3",
-    data : {
+    data: {
         earn_doller: 300,
     },
-    methods : {
+    methods: {
         total_earn_doller(newTotal) {
             this.earn_doller += newTotal;
         }
     }
+});
+
+let app4 = new Vue({
+    el: "#app4",
+    data: {
+        dbl_total_doller: 300,
+    },
+    methods: {
+        dbl_total_earn_doller(money) {
+            this.dbl_total_doller += money;
+        },
+    },
 });
