@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue JS</title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <h2 v-if="name">{{ f_name }}</h2>
+            <h2 v-else-if="age">{{ f_age }}</h2>
+            <button @click="myname">Show | {{ name }}</button>
+            <button @click="myage">Show | {{ age }}</button>
+        </div>
+        <div id="app2">
+            <ol>
+                <li v-for="name of names">{{ name }}</li>
+            </ol>
+        </div>
+
+        <div id="app3">
+            <h3>Lopping</h3>
+            <table>
+                <tr>
+                    <th>Sl</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Department</th>
+                    <!-- <th>Action</th> -->
+                </tr>
+                <tr v-for="(user, index) of users">
+                    <td>{{index + 1}}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.age }} years old</td>
+                    <td>{{ user.department }}</td>
+                    <!-- <td>
+                        <button @click="showHide">
+                            show | {{showInfo}}
+                        </button>
+                    </td> -->
+                </tr>
+            </table>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
