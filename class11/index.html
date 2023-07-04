@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{newF}}</p>
+        <input type="text" v-model="newF">
+
+
+        <h3>{{ oldF }}</h3>
+        <button v-on:click="updateChnageThis('I love you baby', $event)">
+            Click Here
+        </button>
+        <br>
+        <br>
+        <form v-on:submit.prevent="getFormSubitData">
+            <label for="">Name:</label>
+            <input type="text" v-model="formData.nameValue">
+            <br>
+            <br>
+            <label for="">Email:</label>
+            <input type="email" v-model="formData.emailValue">
+            <br>
+            <br>
+            <button type="submit">
+                Submit
+            </button>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <button type="button" v-on:click="a++">A</button>
+            <button type="button" v-on:click="b++">B</button>
+            <p>A : {{a}}</p>
+            <p>B : {{b}}</p>
+            <!-- for methods  -->
+            <!-- <h3>Total + A : {{ totalToA() }}</h3> -->
+            <!-- <h3>Total + B : {{ totalToB() }}</h3> -->
+            <h3>Total + A : {{ totalToA }}</h3>
+            <h3>Total + B : {{ totalToB }}</h3>
+        </form>
+
+        <p>{{ formData2.nameValue1 }}</p>
+        <p>{{ formData2.emailValue2 }}</p>
+    </div>
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

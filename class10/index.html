@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js</title>
+    <style>
+        .box {
+            background: red;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-for="(car, key) in cars">
+            {{ key }} : {{ key+1 }}: {{ car }}
+        </div>
+
+        <div v-for="(info, key2, index2) in infos">
+            {{key2}}: {{index2}} : {{info}}
+        </div>
+
+        <p> {{names}} </p>
+        <p v-once> {{names}} </p>
+        {{update()}}
+        
+        <button v-on:click="updateName">Update name</button>
+
+        <div v-on:mousemove="getcoord" class="box">
+
+        </div>
+        <p>X : {{x}}</p>
+        <p>Y : {{y}}</p>
+
+        <form v-on:submit="formSubmit">
+            <input type="text">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
