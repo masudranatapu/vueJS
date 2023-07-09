@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>Name: {{msg}}</h2>
+        <h2>Age: {{age}}</h2>
+        <h2>Work: {{work}}</h2>
+        <h4>{{nowTime()}}</h4>
+        <h4>{{nowTimeOne()}}</h4>
+        <button v-on:click="changeNmae">Click</button>
+
+
+
+        <h3>Count: {{ total }}</h3>
+        <button v-on:click="totalPlus">Plus</button>
+        <button v-on:click="totalMinus">Minus</button>
+
+
+        <br>
+        <h3>New total : {{newTotal}}</h3>
+        <button v-on:click="newTotal++">Plus</button>
+        <button v-on:click="newTotal--">Minus</button>
+    </div>
+    <script src="vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+            margin: auto;
+            height: 300px;
+            width: 300px;
+            background: gray;
+        }
+        .card button {
+            position: absolute;
+            margin-top: 100px;
+            padding: 10px;
+            color: red;
+            border: 1px solid black;
+            top: 50%;
+            left:50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h3>What is your name</h3>
+        <input type="text" v-on:keyup="handelKeyup">
+        <p>Welcome to our company: {{fullName}}</p>
+    </div>
+
+    <div id="app2">
+        <div class="card" v-on:click="handelCard">
+            <button v-on:click.stop="handelButton">Click Me</button>
+        </div>
+    </div>
+    <script src="vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
