@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Js</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="number" v-model="g_value">
+            <br>
+            <br>
+            <button v-on:click="doubbleHendel">Doubble</button>
+            <button v-on:click="squireHendel">Squire</button>
+            <button v-on:click="resetHendel">Reset</button>
+
+            <br>
+
+            <h3>Given Value :  {{ g_value  }}</h3>
+            <h3>Doubble Value : {{ d_value  }} </h3>
+            <h3>Squire Value : {{ s_value  }} </h3>
+        </div>
+        <script src="vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

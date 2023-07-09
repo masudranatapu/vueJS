@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Class 21</title>
+        <style>
+            .red {
+                height: 100px;
+                width: 100px;
+                background-color: red;
+            }
+            .blue {
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+            }
+            .green {
+                height: 100px;
+                width: 100px;
+                background-color: green;
+            }
+            .gray {
+                height: 100px;
+                width: 100px;
+                background-color: gray;
+            }
+            .active {
+                background-color: tomato;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <button :class="{ active: myactiveClass == 'red' }" v-on:click="getColorChange('red')">Red</button>
+            <button :class="{ active: myactiveClass == 'green' }" v-on:click="getColorChange('green')">Green</button>
+            <button :class="{ active: myactiveClass == 'blue' }" v-on:click="getColorChange('blue')">Blue</button>
+            <button :class="{ active: myactiveClass == 'gray' }" v-on:click="getColorChange('gray')">gray</button>
+            <br>
+            <div :class="myactiveClass">
+
+            </div>
+        </div>
+        <script src="vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
