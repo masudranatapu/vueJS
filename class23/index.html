@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 23</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="addNmae"> <button @click="addNameHandel">Add Name</button>
+        <ul>
+            <li v-for="(name, intex) of names" @click="removedItemName(intex)">
+                {{ intex + 1}} {{ name }}
+            </li>
+        </ul>
+    </div>
+    <script src="vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

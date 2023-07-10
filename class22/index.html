@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class22</title>
+    <style>
+        .card {
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="w">
+        <input type="text" v-model="h">
+        <input type="text" v-model="textColor" placeholder="Text Color"> <input type="color" v-model="textColor">
+        <input type="text" v-model="bgColor" placeholder="Bg Color"> <input type="color" v-model="bgColor">
+        <br>
+        <br>
+        <div :style="{background: bgColor, color: textColor, height: h, width:w}">
+            <h3>Hi all best working for us</h3>
+        </div>
+    </div>
+    <script src="vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
